@@ -6,9 +6,9 @@
 
 
 
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 24 41](https://github.com/user-attachments/assets/6e5b8225-371a-4deb-9998-e999df57bd4e)
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 24 53](https://github.com/user-attachments/assets/534c7f97-f1c4-4769-af10-598ce8cd115f)
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 05](https://github.com/user-attachments/assets/6d30222d-2359-4ead-837f-e6da998d34d3)
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 01](https://github.com/user-attachments/assets/c4b1977e-208e-4028-9c04-cbf3c6f42348)
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 24](https://github.com/user-attachments/assets/86a94e76-80b3-4aca-ab3b-e604594a1114)
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 31 00](https://github.com/user-attachments/assets/4266b012-06b8-4d05-b1d4-1621273ddfd4)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 24 41](https://github.com/user-attachments/assets/35d6d428-5d64-480f-910d-30ea849a6c4b)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 24 53](https://github.com/user-attachments/assets/f1553089-64c7-4438-be5b-dc7fedf77114)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 05](https://github.com/user-attachments/assets/020e0479-fadf-40a6-bebc-c986dc19dbf8)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 31 00](https://github.com/user-attachments/assets/775ddee7-828c-411b-9b60-cc78f588e6f1)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 01](https://github.com/user-attachments/assets/7c12d622-8f01-4115-a4b9-a22bf3f42797)
+![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 24](https://github.com/user-attachments/assets/4c3074c7-c8fb-4847-912f-1ec65f477933)
