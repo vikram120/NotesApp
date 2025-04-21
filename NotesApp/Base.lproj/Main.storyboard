@@ -1,24 +1,1361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cfB-sp-anQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--QuickNote-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesListViewController" id="BYZ-38-t0r" customClass="NotesListViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ypb-eZ-Mq5">
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="80" id="Pbi-6f-S1B" customClass="NotesTableCell" customModule="NotesApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pbi-6f-S1B" id="Bcz-56-YgU">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9W-M9-kSI">
+                                                    <rect key="frame" x="10" y="6" width="373" height="68"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-de-ubW">
+                                                            <rect key="frame" x="8" y="8" width="357" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9S-kU-Esc">
+                                                            <rect key="frame" x="8" y="41" width="357" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                            <color key="textColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-Pe-isN">
+                                                            <rect key="frame" x="344" y="14" width="21" height="19"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="21" id="aen-mG-Way"/>
+                                                                <constraint firstAttribute="height" constant="19" id="mGe-ed-EvN"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.75384894930000002" green="0.90713543569999999" blue="0.99599999189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="x8x-de-ubW" secondAttribute="trailing" constant="8" id="0Lb-8U-5Rc"/>
+                                                        <constraint firstItem="r9S-kU-Esc" firstAttribute="top" secondItem="x8x-de-ubW" secondAttribute="bottom" constant="15" id="3Sl-Jr-7FF"/>
+                                                        <constraint firstAttribute="bottom" secondItem="r9S-kU-Esc" secondAttribute="bottom" constant="10" id="3VK-jb-xmA"/>
+                                                        <constraint firstItem="x8x-de-ubW" firstAttribute="leading" secondItem="M9W-M9-kSI" secondAttribute="leading" constant="8" id="7zB-4M-hdl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="r9S-kU-Esc" secondAttribute="trailing" constant="8" id="HoV-xN-QUK"/>
+                                                        <constraint firstItem="0H7-Pe-isN" firstAttribute="top" secondItem="M9W-M9-kSI" secondAttribute="top" constant="14" id="SBS-oZ-Z80"/>
+                                                        <constraint firstItem="x8x-de-ubW" firstAttribute="top" secondItem="M9W-M9-kSI" secondAttribute="top" constant="8" id="Xcu-qy-4GN"/>
+                                                        <constraint firstItem="r9S-kU-Esc" firstAttribute="top" secondItem="0H7-Pe-isN" secondAttribute="bottom" constant="8" symbolic="YES" id="bNt-hG-zV4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="0H7-Pe-isN" secondAttribute="trailing" constant="8" id="gJT-iq-1Vy"/>
+                                                        <constraint firstItem="r9S-kU-Esc" firstAttribute="leading" secondItem="M9W-M9-kSI" secondAttribute="leading" constant="8" id="lR9-r5-0RM"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="M9W-M9-kSI" secondAttribute="bottom" constant="6" id="1tl-aK-HLk"/>
+                                                <constraint firstAttribute="trailing" secondItem="M9W-M9-kSI" secondAttribute="trailing" constant="10" id="IaQ-yA-ZUE"/>
+                                                <constraint firstItem="M9W-M9-kSI" firstAttribute="leading" secondItem="Bcz-56-YgU" secondAttribute="leading" constant="10" id="SCf-WX-xEL"/>
+                                                <constraint firstItem="M9W-M9-kSI" firstAttribute="top" secondItem="Bcz-56-YgU" secondAttribute="top" constant="6" id="u5P-L3-UpO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="r9S-kU-Esc" id="mIA-lT-SCq"/>
+                                            <outlet property="pinned" destination="0H7-Pe-isN" id="aKy-jg-IdG"/>
+                                            <outlet property="title" destination="x8x-de-ubW" id="kcT-Zu-wht"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ip3-Bq-AFc"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Rc4-mO-JVq"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdc-Qw-uvW">
+                                <rect key="frame" x="314" y="110" width="59" height="41"/>
+                                <color key="backgroundColor" red="0.8078432083" green="0.9529411793" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="VEk-CH-Trh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="59" id="zYX-Pk-Pts"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add +">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddNotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R0v-5x-zLL"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atC-51-7Vz">
+                                <rect key="frame" x="33.666666666666657" y="399.66666666666669" width="318.66666666666674" height="43"/>
+                                <string key="text">No Notes Yet 📝 Tap '+' to create one!
+</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Your Notes   🔎" textAlignment="justified" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGZ-ZX-LSh">
+                                <rect key="frame" x="20" y="113" width="179.66666666666666" height="35"/>
+                                <color key="backgroundColor" red="0.92199999089999995" green="0.90713543569999999" blue="0.99599999189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-fI-xmx">
+                                <rect key="frame" x="215" y="110" width="86" height="41"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="VEb-KN-fPl"/>
+                                    <constraint firstAttribute="height" constant="41" id="wBY-6z-9LS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Delete All">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteAllNotes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xp2-4g-1Ie"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="atC-51-7Vz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3.5" id="4qt-U4-oT7"/>
+                            <constraint firstItem="hdc-Qw-uvW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="65S-JC-hkq"/>
+                            <constraint firstItem="Ypb-eZ-Mq5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Day-tM-R8I"/>
+                            <constraint firstItem="hdc-Qw-uvW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Fm2-WD-jgo"/>
+                            <constraint firstItem="sOb-fI-xmx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="Qag-Gu-HdM"/>
+                            <constraint firstItem="Ypb-eZ-Mq5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qp9-el-73t"/>
+                            <constraint firstAttribute="bottom" secondItem="Ypb-eZ-Mq5" secondAttribute="bottom" id="QpN-KD-QMz"/>
+                            <constraint firstItem="NGZ-ZX-LSh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="SIh-jP-gA2"/>
+                            <constraint firstItem="NGZ-ZX-LSh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Shf-TF-FVT"/>
+                            <constraint firstItem="Ypb-eZ-Mq5" firstAttribute="top" secondItem="sOb-fI-xmx" secondAttribute="bottom" constant="8" symbolic="YES" id="VrD-mE-OEO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hdc-Qw-uvW" secondAttribute="trailing" constant="20" id="XOc-oa-EHt"/>
+                            <constraint firstItem="hdc-Qw-uvW" firstAttribute="leading" secondItem="sOb-fI-xmx" secondAttribute="trailing" constant="13" id="cM1-hy-ZVZ"/>
+                            <constraint firstItem="NGZ-ZX-LSh" firstAttribute="centerY" secondItem="hdc-Qw-uvW" secondAttribute="centerY" id="krR-d0-av0"/>
+                            <constraint firstItem="Ypb-eZ-Mq5" firstAttribute="top" secondItem="hdc-Qw-uvW" secondAttribute="bottom" constant="8" symbolic="YES" id="rKP-lS-AKz"/>
+                            <constraint firstItem="atC-51-7Vz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-5" id="u4t-Bh-yrQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="QuickNote" id="ces-jt-gKR"/>
+                    <connections>
+                        <outlet property="emptyStateLabel" destination="atC-51-7Vz" id="lMU-5f-Lym"/>
+                        <outlet property="searchNotexTxtField" destination="NGZ-ZX-LSh" id="kzh-c0-yAK"/>
+                        <outlet property="tableV" destination="Ypb-eZ-Mq5" id="4fy-fk-otp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="862.31884057971024" y="2.0089285714285712"/>
+        </scene>
+        <!--Note Detail View Controller-->
+        <scene sceneID="Rfb-Ih-p6o">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailViewController" id="YPL-Ip-7DB" customClass="NoteDetailViewController" customModule="NotesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6q-1S-QjH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKh-Jx-n4v">
+                                <rect key="frame" x="20" y="152" width="353" height="647"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Lorem">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ipsum">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="dolor">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="sit">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="er">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="elit">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="lamet">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="consectetaur">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="cillium">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="adipisicing">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="pecu">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="sed">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="do">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="eiusmod">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="tempor">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="incididunt">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ut">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="labore">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="et">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="dolore">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="magna">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="aliqua">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Ut">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="enim">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ad">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="minim">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="veniam">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="quis">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="nostrud">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="exercitation">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ullamco">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="laboris">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="nisi">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ut">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="aliquip">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ex">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ea">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="commodo">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="consequat">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Duis">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="aute">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="irure">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="dolor">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="in">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="reprehenderit">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="in">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="voluptate">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="velit">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="esse">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="cillum">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="dolore">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="eu">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="fugiat">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="nulla">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="pariatur">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Excepteur">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="sint">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="occaecat">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="cupidatat">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="non">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="proident">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="sunt">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="in">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="culpa">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="qui">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="officia">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="deserunt">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="mollit">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="anim">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="id">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="est">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="laborum">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Nam">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="liber">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="te">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="conscient">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="to">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="factor">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="tum">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="poen">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="legum">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="odioque">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="civiuda">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name=".SFNS-Regular"/>
+                                            <font key="NSOriginalFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="Symbol"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes" smartDashesType="yes"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mX-0z-Nz8">
+                                <rect key="frame" x="16" y="47" width="31" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="7eQ-sm-3bj"/>
+                                    <constraint firstAttribute="width" constant="31" id="VIM-wM-Ljx"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <action selector="backNavigate:" destination="YPL-Ip-7DB" eventType="touchUpInside" id="JMq-EW-cjJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeJ-Ck-3Ji">
+                                <rect key="frame" x="271" y="41" width="106" height="44"/>
+                                <color key="backgroundColor" red="0.8078432083" green="0.9529411793" blue="0.64705884459999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="a3n-p6-yzy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save Notes">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveNote:" destination="YPL-Ip-7DB" eventType="touchUpInside" id="mp9-wo-BYZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8js-8p-gnu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WKh-Jx-n4v" firstAttribute="top" secondItem="YeJ-Ck-3Ji" secondAttribute="bottom" constant="67" id="215-98-gF2"/>
+                            <constraint firstItem="6mX-0z-Nz8" firstAttribute="leading" secondItem="8js-8p-gnu" secondAttribute="leading" constant="16" id="8sT-Qe-bDV"/>
+                            <constraint firstItem="6mX-0z-Nz8" firstAttribute="top" secondItem="8js-8p-gnu" secondAttribute="top" constant="-12" id="DVx-xn-k99"/>
+                            <constraint firstItem="YeJ-Ck-3Ji" firstAttribute="top" secondItem="8js-8p-gnu" secondAttribute="top" constant="-18" id="G5T-Xx-qKR"/>
+                            <constraint firstItem="8js-8p-gnu" firstAttribute="trailing" secondItem="WKh-Jx-n4v" secondAttribute="trailing" constant="20" id="Ma9-Ue-pIm"/>
+                            <constraint firstItem="WKh-Jx-n4v" firstAttribute="leading" secondItem="8js-8p-gnu" secondAttribute="leading" constant="20" id="OBF-aL-m0f"/>
+                            <constraint firstItem="WKh-Jx-n4v" firstAttribute="top" secondItem="6mX-0z-Nz8" secondAttribute="bottom" constant="73" id="VRe-Rp-e3W"/>
+                            <constraint firstItem="8js-8p-gnu" firstAttribute="trailing" secondItem="YeJ-Ck-3Ji" secondAttribute="trailing" constant="16" id="atr-Gu-i6k"/>
+                            <constraint firstItem="8js-8p-gnu" firstAttribute="bottom" secondItem="WKh-Jx-n4v" secondAttribute="bottom" constant="19" id="gSj-Hg-jum"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notesTextView" destination="WKh-Jx-n4v" id="dtj-4V-eCx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFY-0A-obA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663.3587786259541" y="0.70422535211267612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8e7-P2-C4l">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUU-La-h2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfB-sp-anQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rSZ-1D-qpg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="R0I-sT-aCX"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-47.826086956521742" y="2.0089285714285712"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="512" height="512"/>
+        <image name="pin" width="512" height="512"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
