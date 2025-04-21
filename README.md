@@ -6,4 +6,4 @@
 
 
 
-![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 24 36](https://github.com/user-attachments/assets/31257a40-c680-4231-b56e-31159106d89f)
+![Simulator Screenshot _imresizer](https://github.com/user-attachments/assets/1f532807-a2eb-4ed5-a4cb-3f97809e836b)
