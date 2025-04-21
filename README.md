@@ -12,3 +12,10 @@
 ![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 31 00](https://github.com/user-attachments/assets/775ddee7-828c-411b-9b60-cc78f588e6f1)
 ![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 01](https://github.com/user-attachments/assets/7c12d622-8f01-4115-a4b9-a22bf3f42797)
 ![Simulator Screenshot - iPhone 15 - 2025-04-21 at 20 25 24](https://github.com/user-attachments/assets/4c3074c7-c8fb-4847-912f-1ec65f477933)
+
+
+
+Below is the demonstration of how app works.
+
+https://github.com/user-attachments/assets/da2c0e94-2877-457e-811f-104953ed93cf
+
