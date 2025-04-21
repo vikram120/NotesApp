@@ -6,4 +6,3 @@
 
 
 
-![Simulator Screenshot _imresizer](https://github.com/user-attachments/assets/1f532807-a2eb-4ed5-a4cb-3f97809e836b)
